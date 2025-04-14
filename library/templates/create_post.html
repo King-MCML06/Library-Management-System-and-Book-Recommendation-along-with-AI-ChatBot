@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Create Post
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background: url('https://assets.onecompiler.app/432naj44g/43cyq9gky/1000007936.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden; 
+    }
+
+    .page-container {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        padding-left: 10%;
+        padding-bottom: 4%;
+    }
+
+    .form-register {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        width: 30vw;
+        height: 75vh;
+        color: white;
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        overflow-y: auto;
+        padding: 30px;
+        scrollbar-width: none;
+    }
+
+    .form-register::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: none;
+        padding: 12px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white !important;
+        outline: none;
+        transition: 0.3s;
+        width: 100%;
+    }
+
+    .form-register h1 i {
+        font-size: 26px;
+        color: #ffdd57;
+    }
+
+    label {
+        font-weight: 500;
+        font-size: 14px;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .form-control::placeholder {
+        color: white;
+    }
+
+    .form-control:focus {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-primary {
+        background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 15px;
+        width: 100%;
+        transition: 0.3s;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5);
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        box-shadow: 0 4px 15px rgba(255, 75, 43, 0.8);
+    }
+</style>
+
+<div class="page-container">
+    <form method="POST" class="form-register">
+        {{ form.hidden_tag() }}
+        <h1><i class="fas fa-pencil-alt"></i> Share Your Thoughts</h1>
+
+        {{ form.post_title.label() }}
+        {{ form.post_title(class="form-control", placeholder="Post Title") }}
+
+        {{ form.post_body.label() }}
+        {{ form.post_body(class="form-control", placeholder="What's on your mind?") }}
+
+        {{ form.submit(class="btn btn-lg btn-primary") }}
+    </form>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+{% endblock %}w
