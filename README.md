@@ -2,7 +2,6 @@
 <div align="center">
   <h1>📚 Library Management & Book Recommendation System</h1>
   <p><strong>Empowering Libraries through Smart Automation and AI-ML</strong></p>
-  <p><i>Developed as a course project for CS 1201 (IIT Patna)</i></p>
 </div>
 
 <br />
@@ -97,4 +96,3 @@ Our recommendation engine runs on a carefully designed pipeline:
 * **L. Sai Prem** (2401PH30) 
 
 ---
-*Created for the CS 1201 coursework.*
